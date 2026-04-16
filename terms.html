@@ -9,15 +9,29 @@
 <body>
     <h1>Conditions d'utilisation</h1>
     <p>Derniere mise a jour : avril 2026</p>
+
     <h2>1. Description du service</h2>
-    <p>AutoVideo est une application web de creation et publication automatique de videos courtes sur les reseaux sociaux. L'utilisateur autorise l'application a publier du contenu sur ses comptes via les APIs officielles (TikTok, Instagram, YouTube).</p>
+    <p>AutoVideo est une application de bureau (desktop) installee localement sur l'ordinateur de l'utilisateur. Elle permet de generer et publier automatiquement des videos courtes sur les reseaux sociaux (TikTok, Instagram, YouTube Shorts) via les APIs officielles.</p>
+    <p>L'application fonctionne entierement en local sur la machine de l'utilisateur : aucun serveur distant n'est utilise pour traiter ou stocker le contenu.</p>
+
     <h2>2. Utilisation</h2>
-    <p>L'utilisateur s'engage a utiliser le service conformement aux conditions d'utilisation des plateformes tierces. L'utilisateur est seul responsable du contenu publie via son compte.</p>
+    <p>L'utilisateur s'engage a utiliser le service conformement aux conditions d'utilisation des plateformes tierces (TikTok Terms of Service, Instagram Terms, YouTube Terms). L'utilisateur est seul responsable du contenu qu'il publie via son compte.</p>
+    <p>L'utilisation d'AutoVideo est reservee a un usage personnel non commercial sauf accord prealable.</p>
+
     <h2>3. Autorisation OAuth</h2>
-    <p>L'application accede aux comptes de l'utilisateur uniquement apres autorisation explicite via le protocole OAuth 2.0. L'utilisateur peut revoquer cet acces a tout moment depuis les parametres de la plateforme concernee.</p>
-    <h2>4. Limitation de responsabilite</h2>
-    <p>AutoVideo est fourni "tel quel", sans garantie d'aucune sorte. Nous ne garantissons pas la disponibilite continue du service ni la publication reussie de chaque video.</p>
-    <h2>5. Modification</h2>
-    <p>Ces conditions peuvent etre modifiees a tout moment. L'utilisation continue du service apres modification vaut acceptation des nouvelles conditions.</p>
+    <p>L'application utilise le protocole OAuth 2.0 avec PKCE (Proof Key for Code Exchange) pour acceder aux comptes de l'utilisateur sur les plateformes tierces. L'acces est explicitement autorise par l'utilisateur via une redirection vers le site officiel de la plateforme.</p>
+    <p>L'utilisateur peut revoquer l'acces a tout moment depuis les parametres de securite de la plateforme concernee.</p>
+
+    <h2>4. Contenu genere par IA</h2>
+    <p>Les videos generees par AutoVideo sont produites par intelligence artificielle. Conformement aux guidelines des plateformes, l'application marque automatiquement tout contenu publie avec l'indicateur "AIGC" (AI-Generated Content) via l'API Content Posting.</p>
+
+    <h2>5. Limitation de responsabilite</h2>
+    <p>AutoVideo est fourni "tel quel", sans garantie d'aucune sorte. Nous ne garantissons pas la disponibilite continue du service, la qualite du contenu genere, ni la publication reussie de chaque video.</p>
+
+    <h2>6. Donnees locales</h2>
+    <p>L'utilisateur est responsable de la sauvegarde de ses donnees locales (videos generees, base de donnees SQLite, tokens OAuth). AutoVideo n'effectue aucune sauvegarde automatique vers des serveurs distants.</p>
+
+    <h2>7. Modification</h2>
+    <p>Ces conditions peuvent etre modifiees. L'utilisation continue de l'application apres modification vaut acceptation des nouvelles conditions.</p>
 </body>
 </html>

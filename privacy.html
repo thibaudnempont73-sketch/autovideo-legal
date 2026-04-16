@@ -9,17 +9,54 @@
 <body>
     <h1>Politique de confidentialite</h1>
     <p>Derniere mise a jour : avril 2026</p>
-    <h2>1. Donnees collectees</h2>
-    <p>AutoVideo collecte uniquement les donnees necessaires au fonctionnement du service : tokens d'acces OAuth, noms d'utilisateur des comptes connectes, et metadonnees des videos generees.</p>
-    <h2>2. Stockage des donnees</h2>
-    <p>Toutes les donnees sont stockees localement sur la machine de l'utilisateur dans une base de donnees SQLite. Aucune donnee n'est transmise a des serveurs tiers, hormis les APIs officielles des plateformes (TikTok, Instagram, YouTube) pour la publication de contenu.</p>
-    <h2>3. Partage des donnees</h2>
-    <p>Nous ne vendons, ne partageons et ne transmettons aucune donnee personnelle a des tiers.</p>
-    <h2>4. Utilisation des APIs tierces</h2>
-    <p>L'application utilise les APIs officielles de TikTok (Content Posting API) pour publier des videos sur le compte de l'utilisateur. Les donnees transmises a TikTok sont limitees au contenu video et aux metadonnees de publication (titre, description, hashtags).</p>
-    <h2>5. Suppression des donnees</h2>
-    <p>L'utilisateur peut supprimer ses donnees a tout moment en supprimant son compte depuis l'application ou en revoquant l'acces OAuth depuis les parametres de la plateforme concernee.</p>
-    <h2>6. Contact</h2>
-    <p>Pour toute question relative a la confidentialite, contactez-nous via l'application.</p>
+
+    <h2>1. Nature de l'application</h2>
+    <p>AutoVideo est une application de bureau (desktop) qui s'execute entierement en local sur l'ordinateur de l'utilisateur. Aucune donnee n'est transmise a nos serveurs : nous n'en avons pas.</p>
+
+    <h2>2. Donnees collectees et stockage</h2>
+    <p>Toutes les donnees sont stockees <strong>localement</strong> sur la machine de l'utilisateur, dans une base de donnees SQLite et des dossiers locaux :</p>
+    <ul>
+        <li>Tokens OAuth (access_token, refresh_token) pour les plateformes connectees</li>
+        <li>Metadonnees des videos generees (titre, description, tags, script)</li>
+        <li>Fichiers video et audio temporaires</li>
+        <li>Parametres de configuration (cles API, preferences)</li>
+    </ul>
+
+    <h2>3. Transmission aux tiers</h2>
+    <p>L'application communique avec les services tiers suivants uniquement lorsque l'utilisateur declenche une action :</p>
+    <ul>
+        <li><strong>Anthropic Claude API</strong> : generation de scripts textuels</li>
+        <li><strong>Pexels API</strong> : recherche et telechargement de clips video stock</li>
+        <li><strong>Microsoft Edge TTS / gTTS</strong> : synthese vocale</li>
+        <li><strong>TikTok Content Posting API</strong> : upload et publication de videos</li>
+    </ul>
+    <p>Aucune donnee personnelle n'est vendue, partagee ou transmise a d'autres tiers.</p>
+
+    <h2>4. Utilisation de l'API TikTok</h2>
+    <p>L'application utilise l'API officielle TikTok Content Posting. Les donnees transmises a TikTok sont strictement limitees a :</p>
+    <ul>
+        <li>Le fichier video a publier</li>
+        <li>Les metadonnees de publication (titre, description, hashtags)</li>
+        <li>Les parametres de confidentialite (prive / public / amis)</li>
+        <li>Le marquage AIGC (contenu genere par IA)</li>
+    </ul>
+    <p>Les scopes OAuth demandes sont : <code>user.info.basic</code> (nom d'utilisateur uniquement), <code>video.publish</code> (publication directe), <code>video.upload</code> (upload en brouillon).</p>
+
+    <h2>5. Securite des donnees</h2>
+    <p>Les tokens OAuth sont stockes dans la base de donnees SQLite locale de l'utilisateur. L'utilisateur est responsable de la securite de sa machine et de l'acces a cette base.</p>
+
+    <h2>6. Suppression et controle</h2>
+    <p>L'utilisateur peut a tout moment :</p>
+    <ul>
+        <li>Supprimer un compte connecte depuis l'application (efface le token localement)</li>
+        <li>Revoquer l'autorisation OAuth depuis les parametres de TikTok/Instagram/YouTube (invalide le token cote plateforme)</li>
+        <li>Supprimer toute l'application et ses donnees en effacant le dossier d'installation</li>
+    </ul>
+
+    <h2>7. Enfants</h2>
+    <p>AutoVideo n'est pas destinee aux personnes de moins de 13 ans. L'utilisateur doit se conformer aux conditions d'age des plateformes cibles (TikTok : 13+).</p>
+
+    <h2>8. Contact</h2>
+    <p>Pour toute question relative a la confidentialite ou aux donnees, contactez-nous via l'application.</p>
 </body>
 </html>
